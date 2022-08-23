@@ -1,6 +1,6 @@
 # FizzBuzz.go
 ```console
-$ go run *.go
+$ go run .
 1
 2
 Fizz
