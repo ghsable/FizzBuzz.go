@@ -6,7 +6,7 @@ import (
 
 func TestApp(t *testing.T) {
 	// DATA: WANT
-	var want [15]string = [15]string{"0", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "Fizz Buzz"}
+	var want [15]string = [15]string{"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "Fizz Buzz"}
 
 	// DATA: GOT
 	var got [15]string
