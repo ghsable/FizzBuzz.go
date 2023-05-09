@@ -2,20 +2,21 @@ package main
 
 import (
 	"testing"
+	"reflect"
 )
 
 func TestApp(t *testing.T) {
 	// DATA: WANT
-	var want [15]string = [15]string{"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "Fizz Buzz"}
+	want := []string{"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "Fizz Buzz"}
 
 	// DATA: GOT
-	var got [15]string
+	var got []string
 	for n := 1; n <= 15; n++ {
-		got[n-1] = getPrint(n)
+		got = append(got, getPrint(n))
 	}
 
 	// CHECK
-	if want != got {
+	if !reflect.DeepEqual(want, got) {
 		t.Errorf("\n[ERROR] getPrint(n int):\n  want = %s\n  got  = %s", want, got)
 	}
 }
